@@ -30,7 +30,7 @@ def total_tickets_sold():
 
     while True:
         try:
-            tickets = int(input("How many tickets would you like? ")) # Gets a ticket input
+            tickets = int(input("How many tickets would you like to purchase today? You may purchase up to 4 ")) # Gets a ticket input
 
             if tickets > 4:
                 print("You can only have a maximum of 4 tickets.") # Makes sure only 4 tickets max will be purchased
