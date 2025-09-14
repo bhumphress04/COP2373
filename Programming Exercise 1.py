@@ -25,7 +25,7 @@
 from symtable import Function
 
 def total_tickets_sold():
-    total_tickets = 0  # keeps track of all tickets sold
+    total_tickets_bought = 0  # keeps track of all tickets sold
     total_buyers = 0 # Keeps track of the amount of buyers in the booth
 
     while True:
@@ -34,18 +34,18 @@ def total_tickets_sold():
 
             if tickets > 4:
                 print("You can only have a maximum of 4 tickets.") # Makes sure only 4 tickets max will be purchased
-            elif total_tickets + tickets > 10:
-                print(f"Too many tickets have been sold. There are {10 - total_tickets} available.")
+            elif total_tickets_bought + tickets > 10:
+                print(f"Too many tickets have been sold. There are {10 - total_tickets_bought} available.")
             else:
-                total_tickets += tickets
+                total_tickets_bought += tickets
                 total_buyers += 1  # count the buyer
 
-                if total_tickets == 10:
+                if total_tickets_bought == 10:
                     print("The total amount of tickets have been sold!")
                     break
                 else:
                     print(f"You have purchased {tickets} tickets!")
-                    print(f"Total tickets sold so far: {total_tickets}")
+                    print(f"Total tickets sold so far: {total_tickets_bought}")
                     print(f"Total buyers so far: {total_buyers}")
 
         except ValueError:
